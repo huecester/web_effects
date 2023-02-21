@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '@fontsource/space-mono';
+	import HologramIntro from './HologramIntro.svelte';
 	import ScrambleHoverText from './ScrambleHoverText.svelte';
 
 	export let links: { name: string; href: string }[];
@@ -17,11 +18,12 @@
 	</ul>
 </nav>
 
+<div class="hologram-intro">
+	<HologramIntro color="white">Hello, world!</HologramIntro>
+</div>
+
 <style lang="scss">
 	nav {
-		font-family: 'Space Mono', monospace;
-		background-color: black;
-
 		ul {
 			margin: 0;
 			padding: 0;
@@ -32,11 +34,17 @@
 				a {
 					font-size: 5rem;
 					font-weight: bold;
-					color: white;
 					text-transform: uppercase;
-					text-decoration: none;
+
+					color: inherit;
+					text-decoration: inherit;
 				}
 			}
 		}
+	}
+
+	.hologram-intro {
+		background-color: black;
+		font-size: 5rem;
 	}
 </style>
